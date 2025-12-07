@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Project7 — A starry night on a farm</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Small, focused styles for the project page */
+        body { background: #f3f6f8; color: #112; font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; padding: 32px; }
+        main { max-width: 900px; margin: 0 auto; }
+        pre { background: #0b1220; color: #d7e9ff; padding: 18px; border-radius: 8px; overflow: auto; box-shadow: 0 6px 20px rgba(4,9,20,0.12); }
+        h1 { font-size: 1.4rem; margin-bottom: 12px; }
+        a.back { display: inline-block; margin-top: 18px; color: #fff; background:#005c99; padding: 8px 12px; border-radius:6px; text-decoration:none; }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Project7 — "A starry night on a farm"</h1>
+        <p>This page displays the Python turtle code (text only).</p>
+
+        <pre><code>from turtle import *
+#Enzo Domenico October 5th "A starry night on a farm"
+#change background to blue
+bgcolor("#3A4B65")
+bgcolor()
+(128.0, 0.0, 128.0)
+#get pen ready to draw the house
+width (8)
+color('black')
+fillcolor ("#4A310D")
+
+speed(2)
+#create the square part of the house
+begin_fill()
+for i in range(4):
+    forward(100)
+    left(90)
+end_fill()
+#position pen to draw roof
+up()
+goto (100,100)
+down()
+color('black')
+fillcolor ('red')
+
+speed(6)
+
+begin_fill()
+#draw triange roof
+for i in range (3):
+ left (120)
+ forward (100)
+end_fill()
+
+speed(10)
+#get pen positioned to draw the grass
+up()
+goto (-400,0)
+down() 
+</code></pre>
+
+        <a class="back" href="index.html">Back to resume</a>
+    </main>
+</body>
+</html>

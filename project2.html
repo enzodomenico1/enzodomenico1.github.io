@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project2 — Turtle Code</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Project2 — Turtle Code</h1>
+        <p><a href="index.html">← Back to resume</a></p>
+        <hr>
+    </header>
+
+    <section>
+        <h2>Python Turtle Script</h2>
+        <p>This page shows the Python turtle code for the second project.</p>
+        <pre><code># loads the Turtle graphics module, which is a built-in library in Python
+from turtle import *
+#Enzo Domenico
+
+def setup_turtle():
+#"""Initialize turtle with standard settings"""
+    t = turtle.Turtle()
+    speed(0) # Fastest speed
+    screen = turtle.Screen()
+    screen.title("Turtle Graphics Assignment")
+    return screen
+#set background color
+def draw_scene():
+# Set background color
+   getscreen()
+   bgcolor("skyblue")
+   bgcolor()
+
+#set rectangle function
+def draw_rectangle(width=10, height=20,fill_color="red" ):
+#"""Draw a rectangle with optional fill"""
+    if fill_color:
+        fillcolor(fill_color)
+        begin_fill()
+    for i in range(2):
+        forward(width)
+        right(90)
+        forward(height)
+        right(90)
+    if fill_color:
+        end_fill()
+
+
+#set triangle function
+def draw_triangle( size=40, fill_color="grey"):
+#"""Draw an equilateral triangle with optional fill"""
+    if fill_color:
+        fillcolor(fill_color)
+        begin_fill()
+    for i in range(3):
+        forward(size)
+        left(120)
+    if fill_color:
+        end_fill()
+
+#set jumping function
+def jump_to(x, y):
+#"""Move turtle without drawing"""
+    penup()
+    goto(x, y)
+    pendown()
+
+#set circle function
+def draw_circle( radius=40, fill_color="yellow"):
+#"""Draw a circle with optional fill"""
+    if fill_color:
+        fillcolor(fill_color)
+        begin_fill()
+        circle(radius)
+    if fill_color:
+        end_fill()
+
+
+#set cloud function with 3 circles
+def draw_cloud( radius=30, fill_color="white"):
+#"""Draw a cloud with optional fill"""
+    if fill_color:
+        fillcolor(fill_color)
+        begin_fill()
+        circle(radius)
+        end_fill()
+        up()
+        forward(60)
+        down()
+        begin_fill()
+        circle(radius)
+        end_fill()
+        left(90)
+        up()
+        forward(60)
+        down()
+        begin_fill()
+        circle(radius)
+        end_fill()
+        right(90)
+     
+
+
+draw_scene()
+#draw building 1
+draw_rectangle (100,400, "grey")
+draw_triangle(100,"darkgrey")
+#draw building 2
+jump_to(-375,0)
+draw_rectangle (120,400, "grey")
+draw_triangle(120,"darkgrey")
+#draw Sun
+jump_to(275,225)
+draw_circle()
+#Draw building 3
+jump_to(-200,0)
+draw_rectangle (165,400, "grey")
+draw_triangle(165,"darkgrey")
+#draw house
+jump_to (200,-300)
+draw_rectangle(100,100,"red")
+draw_triangle(100,"darkred")
+#draw cloud 1
+jump_to(-300,200)
+draw_cloud(30,"white")
+#draw cloud 2
+jump_to(-100,250)
+draw_cloud(30,"white")
+#draw cloud 3
+jump_to(200,50)
+draw_cloud(30,"white")
+
+
+
+
+done()
+</code></pre>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Enzo Domenico</p>
+    </footer>
+
+</body>
+</html>

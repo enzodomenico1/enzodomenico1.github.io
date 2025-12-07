@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project1 — Turtle Code</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Project1 — Turtle Code</h1>
+        <p><a href="index.html">← Back to resume</a></p>
+        <hr>
+    </header>
+
+    <section>
+        <h2>Python Turtle Script</h2>
+        <p>This page shows the Python turtle code for "A starry night on a farm".</p>
+        <pre><code>from turtle import *
+#Enzo Domenico October 5th "A starry night on a farm"
+#change background to blue
+bgcolor("#3A4B65")
+bgcolor()
+(128.0, 0.0, 128.0)
+#get pen ready to draw the house
+width (8)
+color('black')
+fillcolor ("#4A310D")
+
+speed(2)
+#create the square part of the house
+begin_fill()
+for i in range(4):
+    forward(100)
+    left(90)
+end_fill()
+#position pen to draw roof
+up()
+goto (100,100)
+down()
+color('black')
+fillcolor ('red')
+
+speed(6)
+
+begin_fill()
+#draw triange roof
+for i in range (3):
+ left (120)
+ forward (100)
+end_fill()
+
+speed(10)
+#get pen positioned to draw the grass
+up()
+goto (-400,0)
+down() 
+#draw grass
+fillcolor('dark green')
+begin_fill()
+for i in range(4):
+    forward(800)
+    right(90)
+end_fill()
+
+
+
+
+#draw moon in top left corner
+up()
+goto(-275,320)
+down()
+
+fillcolor('white')
+begin_fill()
+for i in range (10):
+ forward(30)
+ right(36)
+end_fill()
+
+speed(10)
+color('gold') 
+fillcolor('gold')
+
+#create a star next to the moon
+up()
+goto(-150,320)
+down()
+width(3)
+begin_fill()
+for i in range (5):
+ forward(13)
+ right(144)
+end_fill()
+
+#i looked up "how to make a varible to change a stars location in python" on ChatGPT
+
+star_x = 100   # how far left/right (x position)
+star_y = 200   # how far up/down (y position)\
+
+# --- Move the turtle to that position ---
+up()
+goto(star_x, star_y)
+down()
+for i in range (5):
+ forward(13)
+ right(144)
+end_fill()
+
+star_x = 300
+star_y = 150
+up()
+goto(star_x, star_y)
+down()
+for i in range (5):
+ forward(13)
+ right(144)
+end_fill()
+#i looked up "how to make a varible to change a stars location in python" on ChatGPT
+
+star_x = 100   # how far left/right (x position)
+star_y = 200   # how far up/down (y position)\
+
+# --- Move the turtle to that position ---
+up()
+goto(star_x, star_y)
+down()
+for i in range (5):
+ forward(13)
+ right(144)
+end_fill()
+
+star_x = 300
+star_y = 150
+up()
+goto(star_x, star_y)
+down()
+for i in range (5):
+ forward(13)
+ right(144)
+end_fill()
+
+
+
+star_x = -50
+star_y = 100
+up()
+goto(star_x, star_y)
+down()
+for i in range (5):
+ forward(13)
+ right(144)
+end_fill()
+star_x = -300
+star_y = 100
+up()
+goto(star_x, star_y)
+down()
+for i in range (5):
+ forward(13)
+ right(144)
+end_fill()
+
+up()
+goto(50,0)
+down()
+color('black')
+fillcolor ("#291903")
+
+begin_fill()
+for i in range(2):
+    forward(20)
+    left(90)
+    forward(40)
+    left(90)
+end_fill()
+
+done()
+
+
+</code></pre>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Enzo Domenico</p>
+    </footer>
+
+</body>
+</html>
