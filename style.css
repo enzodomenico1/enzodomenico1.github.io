@@ -1,0 +1,186 @@
+/* Enzo Domenico — Resume styles */
+/* make sure this file is saved as styles.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #222;
+    /* use a responsive width so the resume scales to different screens */
+    width: min(96%, 1200px);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+    position: relative;
+    background-color: #f6f8fa;
+}
+
+/* Make base text larger and responsive so content reads well against the decorative background */
+/* base font size scales with viewport but stays within readable bounds */
+html { font-size: clamp(16px, 1.8vw + 12px, 20px); }
+
+
+/* Background Image with Transparency */
+body:before {
+    content: "";
+    /* center a reasonably-sized decorative image behind the content */
+    position: fixed;
+    /* cover the entire viewport so the decorative image never appears as a small box */
+    inset: 0; /* top:0; right:0; bottom:0; left:0 */
+    /* use the full viewport and cover to avoid letterboxing/small image on large monitors */
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* keep the image subtle so text remains readable */
+    opacity: 0.08;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Larger-screen adjustments so the layout uses more of 1280px / 1440px viewports */
+@media (min-width: 1280px) {
+    body {
+        max-width: 1100px; /* allow content to spread more on 1280px screens */
+        padding: 28px;
+    }
+
+    /* slightly larger base size on larger screens */
+    html { font-size: 19px; }
+
+    .profile-img {
+        width: clamp(110px, 10vw, 200px);
+        height: clamp(110px, 10vw, 200px);
+    }
+
+    body:before {
+        /* keep the fullscreen behavior on larger screens; reduce opacity slightly if desired */
+        inset: 0;
+        background-size: cover;
+        opacity: 0.07;
+    }
+}
+
+@media (min-width: 1440px) {
+    body {
+        max-width: 1200px; /* use more width on very large displays */
+        padding: 36px;
+    }
+
+    html { font-size: 20px; }
+
+    .profile-img {
+        width: clamp(140px, 11vw, 240px);
+        height: clamp(140px, 11vw, 240px);
+    }
+
+    body:before {
+        inset: 0;
+        background-size: cover;
+        opacity: 0.06;
+    }
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-img {
+    /* larger and responsive: scales up on wider viewports but stays reasonable on small screens */
+    width: clamp(90px, 12vw, 150px);
+    height: clamp(90px, 12vw, 150px);
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 3px solid #444;
+}
+
+h1 {
+    margin-bottom: 8px;
+    color: #111;
+    /* make the main name/title more prominent across viewports */
+    font-size: clamp(1.4rem, 2.6vw, 2.4rem);
+}
+
+header p a {
+    color: #005c99;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+header p a:hover {
+    text-decoration: underline;
+}
+
+/* Sections */
+section {
+    background: rgba(255,255,255,0.92);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+}
+
+h2 {
+    margin-bottom: 8px;
+    color: #003c5f;
+    font-size: 1.05rem; /* slightly larger section headers */
+}
+
+h3 {
+    margin: 10px 0 6px;
+    color: #005c99;
+    font-size: 0.98rem;
+}
+
+ul, ol {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    opacity: 0.9;
+    font-size: 0.9rem;
+}
+
+/* Project button and code styling */
+.project-btn {
+    display: inline-block;
+    background: #005c99;
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+.project-btn:hover {
+    background: #004b7a;
+}
+/* spacing between adjacent project buttons */
+.project-btn + .project-btn {
+    margin-left: 12px;
+}
+
+pre {
+    background: #0f1720;
+    color: #e6eef6;
+    padding: 16px;
+    border-radius: 8px;
+    overflow: auto;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+    font-size: 0.95rem;
+    line-height: 1.45;
+}
+
+code { white-space: pre; }
